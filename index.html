@@ -37,6 +37,11 @@
     color: #fff; /* Cor do texto quando selecionado */
     }
 
+    select:hover {
+      border: 1px solid #009660;
+    }
+
+
     #page-content {
       margin-top: 20px;
       width: 100%;
@@ -44,7 +49,7 @@
       overflow: auto;
     }
 
-    footer, p, label {
+    footer, p>a, label {
       margin-top: 20px;
       text-align: center;
       font-size: 1.2em;
@@ -53,12 +58,29 @@
       word-spacing: 0;
     }
 
+    footer p{
+      color: #333;
+    }
+
+    footer a{
+      text-decoration: none;
+    }
+    .margintop{
+      margin-top: 30px;
+    }
+
+    h6{
+      font-size: 12px;
+      color: #009660;
+    }
+
   </style>
 </head>
 <body>
   <div id="container">
-    <h1>Tema do Projeto</h1>
-    <label for="page-select">Selecione a Página:</label>
+    <h1>1º Passo: Selecione uma unidade de ensino</h1>
+    <h6>Dica: Se acessar pelo celular, use-o com a tela na horizontal!</h6>
+    <label for="page-select">Selecione a Escola:</label>
     <select id="page-select">
       <option value="">- Selecione -</option>
       <option value="./anisio.html">Anisio Teixeira</option>
@@ -76,7 +98,7 @@
     </select>
     <div id="page-content"></div>
     <footer>
-        <p>Feito com ❤️ por<a href="https://github.com/vydhal" target="_blank">Vydhal</a></p>
+        <p>Feito com ❤️ por<a href="https://github.com/vydhal" target="_blank">Vydhal</a> e <a href="https://github.com/cayquesilva"> CayqueSilva</a></p> 
     </footer>
   </div>
 
