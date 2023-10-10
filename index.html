@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-B">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campina pela minha lupa</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+    body {
+      font-family: 'Raleway', sans-serif;
+      font-size: 62.5%;      
+    }
+
+    #container {
+      width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    select {
+      margin-top: 20px;
+      font-size: 1.6em;
+      border: 1px solid #ccc; /* Adiciona uma borda cinza */
+      border-radius: 5px; /* Arredonda as bordas */
+      padding: 5px; /* Adiciona um espaçamento interno */
+      background-color: #fff; /* Cor de fundo branca */
+      color: #333; /* Cor do texto */
+      width: 200px; /* Largura do select */
+      outline: none; /* Remove a borda de foco padrão */
+      cursor: pointer; /* Altera o cursor para a mãozinha ao passar por cima */
+    }
+
+    select option:checked {
+    background-color: #009660; /* Cor de fundo quando selecionado */
+    color: #fff; /* Cor do texto quando selecionado */
+    }
+
+    #page-content {
+      margin-top: 20px;
+      width: 100%;
+      height: 800px;
+      overflow: auto;
+    }
+
+    footer, p, label {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      word-spacing: 1.05;
+      color: #009660;
+      word-spacing: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Tema do Projeto</h1>
+    <label for="page-select">Selecione a Página:</label>
+    <select id="page-select">
+      <option value="">- Selecione -</option>
+      <option value="./anisio.html">Anisio Teixeira</option>
+      <option value="./fernando.html">Fernando Cunha Lima</option>
+      <option value="./lafayete.html">Lafayete Cavalcante</option>
+      <option value="./liliosa.html">Liliosa Barreto</option>
+      <option value="./lindolfo.html">Lindolfo Montenegro</option>
+      <option value="./manoel.html">Manoel Da Costa Cirne</option>
+      <option value="./padre.html">Padre Antonino</option>
+      <option value="./prof_eraldo.html">Prof. Eraldo Cesar De Araujo</option>
+      <option value="./santo_afonso.html">Santo Afonso</option>
+      <option value="./santo_antonio.html">Santo Antonio 2</option>
+      <option value="./stellita.html">Stellita Cruz</option>
+      <!-- Adicione mais opções de página conforme necessário -->
+    </select>
+    <div id="page-content"></div>
+    <footer>
+        <p>Feito com ❤️ por<a href="https://github.com/vydhal" target="_blank">Vydhal</a></p>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#page-select').change(function() {
+        var selectedPage = $(this).val();
+        $('#page-content').load(selectedPage);
+      });
+    });
+  </script>
+</body>
+</html>
