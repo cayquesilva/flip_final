@@ -267,12 +267,31 @@ span {
   background-color: #009660;
   transition: all 0.3s;
 }
+.header{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;;
+}
 
-.b_button:hover {
+.header>h1{
+  margin-bottom: 5px;
+}
+
+.v_button{
+  width: 100px;
+  height: 30px;
+  background-color: #009660;
+  transition: all 0.3s;
+}
+
+.b_button:hover,.v_button:hover {
   background-color: #009660;
 }
 
-.b_button span{
+.b_button span,.v_button span{
   font-size: 1.1em;
 }
 
