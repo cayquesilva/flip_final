@@ -1,81 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-B">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campina pela minha lupa</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-   
-    body {
-      font-family: 'Raleway', sans-serif;
-      font-size: 62.5%;      
-    }
-
-    #container {
-      width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 20px;
-    }
-
-    select {
-      margin-top: 20px;
-      font-size: 1.6em;
-      border: 1px solid #ccc; /* Adiciona uma borda cinza */
-      border-radius: 5px; /* Arredonda as bordas */
-      padding: 5px; /* Adiciona um espaçamento interno */
-      background-color: #fff; /* Cor de fundo branca */
-      color: #333; /* Cor do texto */
-      width: 200px; /* Largura do select */
-      outline: none; /* Remove a borda de foco padrão */
-      cursor: pointer; /* Altera o cursor para a mãozinha ao passar por cima */
-    }
-
-    select option:checked {
-    background-color: #009660; /* Cor de fundo quando selecionado */
-    color: #fff; /* Cor do texto quando selecionado */
-    }
-
-    select:hover {
-      border: 1px solid #009660;
-    }
-
-
-    #page-content {
-      margin-top: 20px;
-      width: 100%;
-      height: auto;
-      overflow: auto;
-    }
-
-    footer, p>a, label {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 1.2em;
-      word-spacing: 1.05;
-      color: #009660;
-      padding-left: 0 !important;
-    }
-
-    footer p{
-      color: #333;
-      font-size: 14px;
-    }
-
-    footer a{
-      text-decoration: none;
-    }
-    .margintop{
-      margin-top: 30px;
-    }
-
-    h6{
-      font-size: 12px;
-      color: #009660;
-    }
-
-  </style>
 </head>
 <body>
   <div id="container">
@@ -97,11 +26,12 @@
       <option value="./stellita.html">Stellita Cruz</option>
       <!-- Adicione mais opções de página conforme necessário -->
     </select>
-    <div id="page-content"></div>
-    <footer>
-        <p>Desenvolvido por: <a href="https://github.com/cayquesilva">CayqueSilva</a> e <a href="https://github.com/vydhal" target="_blank">Vydhal</a></p> 
-    </footer>
   </div>
+
+  <div id="page-content"></div>
+  <footer>
+      <p>Desenvolvido por: <a href="https://github.com/cayquesilva">CayqueSilva</a> e <a href="https://github.com/vydhal" target="_blank">Vydhal</a></p> 
+  </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
@@ -109,6 +39,7 @@
       $('#page-select').change(function() {
         var selectedPage = $(this).val();
         $('#page-content').load(selectedPage);
+        $('#container').addClass('hidden');
       });
     });
   </script>
