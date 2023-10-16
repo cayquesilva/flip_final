@@ -29,7 +29,8 @@
   </div>
 
   <div id="page-content"></div>
-  <footer>
+  <footer class="aberto">
+    <img src="./src/images/logoseduc.png" alt="logo SEDUC">
       <p>Desenvolvido por: <a href="https://github.com/cayquesilva">CayqueSilva</a> e <a href="https://github.com/vydhal" target="_blank">Vydhal</a></p> 
   </footer>
 
@@ -40,6 +41,7 @@
         var selectedPage = $(this).val();
         $('#page-content').load(selectedPage);
         $('#container').addClass('hidden');
+        $('footer').removeClass('aberto');
       });
     });
   </script>

@@ -67,7 +67,9 @@ footer, p>a, label {
 
 footer{
   padding: 15px 0;
+  width: 100%;
   background: rgba(223, 223, 223, 1);
+  
 }
 footer p{
   color: #333;
@@ -76,6 +78,10 @@ footer p{
 
 footer a{
   text-decoration: none;
+}
+
+footer img{
+  width: 20%;
 }
 
 .margintop{
@@ -178,7 +184,10 @@ button {
 span {
   font-size: 1.6em;
 }
-
+.aberto{
+  position: absolute;
+  bottom: 0;
+}
 .container,
 .flip-box,
 .front,
@@ -445,6 +454,8 @@ span {
 
   footer{
     width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 
   .b_button {
@@ -473,6 +484,13 @@ span {
     height: 220px; /* Permita que a altura seja ajustada automaticamente */
   }
 
+  .v_button{
+    height: 20px;
+    border-radius: 8px;
+    width: 80px;
+    margin-bottom: 8px;
+  }
+
   .imgback {
     display:flex;
     justify-content:flex-end;
@@ -485,9 +503,8 @@ span {
     bottom: -55px;
   }
 
-  footer{
-    position: absolute;
-    bottom: 0;
+  footer p{
+    font-size: 8px;
   }
 
   .b_button {
